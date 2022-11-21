@@ -1,20 +1,23 @@
-<title>Contact | HSK</title>
-<link rel="stylesheet" href="./style.css">
+<title>Contact</title>
 
 <script lang="ts">
 
 </script>
 
-<form>
-  <input name="name" type="text" placeholder="Nome">
-  <input name="email" type="email" placeholder="E-mail">
-  <br>
-  <input name="message" type="text" placeholder="Mensagem">
-  <br>
-  <button>Enviar</button>
-</form>
-
 <div>
-  <h1>Contact</h1>
+  <h1>Contato</h1>
+
+  <form>
+    <input name="name" type="text" placeholder="Nome">
+    <input name="email" type="email" placeholder="E-mail">
+    <br>
+    <input name="message" type="text" placeholder="Mensagem">
+    <br>
+    <button>Enviar</button>
+  </form>
 </div>
-<a href="/">Home</a>
+
+
+<style>
+
+</style>

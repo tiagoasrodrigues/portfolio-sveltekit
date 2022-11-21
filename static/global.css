@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root {
+  --background: #1A1B1C;
+  --blue: #0084FF;
+  --white: #F0F0F0;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--background);
+}
