@@ -1,4 +1,4 @@
-<title>Contact</title>
+<title>Contate-me</title>
 
 <script lang="ts">
 
@@ -8,16 +8,75 @@
   <h1>Contato</h1>
 
   <form>
-    <input name="name" type="text" placeholder="Nome">
+    <input name="name" type="text" placeholder="Nome" autocapitalize="words">
     <input name="email" type="email" placeholder="E-mail">
     <br>
-    <input name="message" type="text" placeholder="Mensagem">
+    <input class="message-input" name="message" type="text" placeholder="Mensagem" autocapitalize="words"
+      maxlength="150">
     <br>
     <button>Enviar</button>
   </form>
 </div>
 
-
 <style>
+  div {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
 
+  h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  form {
+    padding-top: 28px;
+  }
+
+  /* mexer na scrollbar
+  e alinha a div ao meio */
+
+  form input {
+    background-color: var(--dark-blue-900);
+    color: var(--white);
+    height: 32px;
+    padding-left: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--blue-600);
+    border-radius: 3px;
+  }
+
+  .message-input {
+    height: 100px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  ::placeholder {
+    color: var(--white);
+  }
+
+  input:focus-visible {
+    outline: 1px solid var(--blue-400);
+  }
+
+  button {
+    height: 28px;
+    width: 100px;
+    font-weight: bold;
+    background-color: var(--blue-600);
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: var(--blue-400);
+    color: var(--background);
+  }
 </style>
