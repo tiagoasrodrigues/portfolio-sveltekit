@@ -73,6 +73,8 @@
   header .image {
     text-align: center;
     padding: 25px 0px;
+    padding-bottom: 3%;
+
   }
 
   header img {
@@ -92,7 +94,7 @@
   }
 
   section h3 {
-    padding-top: 20px;
+    padding-top: 36px;
   }
 
   section p {
@@ -100,6 +102,7 @@
   }
 
   footer {
+    padding-top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
