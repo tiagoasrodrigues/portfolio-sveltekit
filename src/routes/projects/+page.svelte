@@ -1,7 +1,7 @@
 <title>My projects</title>
 
 <script lang="ts">
-  import Project from "/src/components/project.svelte";
+  import Project from "/src/lib/components/project.svelte";
 </script>
 
 <div class="container">
