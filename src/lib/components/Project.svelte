@@ -2,7 +2,10 @@
   import { fade } from 'svelte/transition';
   import { elasticOut } from 'svelte/easing';
 
+  export let numProject = "";
   export let visible = false;
+
+  let active = false;
 
   function spin(node, { duration }) {
     return {
@@ -16,54 +19,28 @@
 						${~~(t * 360)},
 						${Math.min(100, 1000 - 1000 * t)}%,
 						${Math.min(50, 500 - 500 * t)}%
-					);`
+				);`
       }
     };
   }
-  export let numProject = "";
 </script>
 
-<div class="container">
+<button class:active={active} on:click="{() => active = !active}">
   <label>
-    <div class="project-container">
-      <input type="checkbox" bind:checked={visible} placeholder="Ola">
+    <div class="label-merge">
+      <input type="checkbox" bind:checked={visible} class:active={active} on:click="{() => active = !active}">
       Project {numProject}
 
       {#if visible}
       <div class="centered" in:spin="{{duration: 8000}}" out:fade>
-        <span>transitions!</span>
+        <span>Project_{numProject}</span>
       </div>
       {/if}
     </div>
   </label>
-</div>
+</button>
 
 <style>
-  .container {
-    background-color: var(--background);
-    background-image: linear-gradient(180deg, var(--white) 20%, var(--blue-400) 75%);
-    height: 200px;
-    width: 400px;
-    border: 2px solid var(--blue-600);
-    border-radius: 16px;
-    margin: 26px;
-  }
-
-  .project-container {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    transition: 0.5s;
-  }
-
-  .project-container:hover {
-    background-color: var(--blue-600);
-    color: var(--background);
-  }
-
   .centered {
     position: absolute;
     left: 50%;
@@ -77,9 +54,44 @@
     font-size: 2em;
   }
 
-  label {
+  .active {
+    background-color: var(--blue-600);
+    color: var(--white);
+    border: 2px solid var(--white);
+    transition: 0.3s;
+  }
+
+  button {
+    background-color: var(--blue-400);
     color: var(--background);
     font-size: 36px;
+    transition: 0.5s;
+    height: 200px;
+    width: 400px;
+    border: 2px solid var(--blue-600);
+    border-radius: 16px;
+    margin: 26px;
+  }
+
+  button:hover {
+    background-color: var(--blue-600);
+    color: var(--white);
+    border: 2px solid var(--white);
+  }
+
+  label {
+    background-color: red;
+    height: 30px;
+    width: 30px;
+  }
+
+  .label-merge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    border-radius: 16px;
   }
 
   input {
