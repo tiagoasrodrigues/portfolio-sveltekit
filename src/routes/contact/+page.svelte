@@ -11,7 +11,7 @@
     <input name="name" type="text" placeholder="Nome" autocapitalize="words">
     <input name="email" type="email" placeholder="E-mail">
     <br>
-    <textarea name="message" type="text" placeholder="Mensagem"  maxlength="420"> </textarea>
+    <textarea name="message" type="text" placeholder="Mensagem" maxlength="420"> </textarea>
     <br>
     <button>Enviar</button>
   </form>
@@ -58,6 +58,7 @@
     border: 1.5px solid var(--blue-600);
     border-radius: 8px;
     margin-bottom: 10px;
+    resize: none;
   }
 
   ::placeholder {
@@ -65,6 +66,10 @@
   }
 
   input:focus-visible {
+    outline: 1px solid var(--blue-400);
+  }
+
+  textarea:focus-visible {
     outline: 1px solid var(--blue-400);
   }
 
