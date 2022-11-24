@@ -66,6 +66,8 @@
 <style>
   .container {
     padding: 0px 50px;
+    width: 100%;
+    height: 100vh;
   }
 
   header .image {
@@ -76,12 +78,12 @@
   header img {
     width: 150px;
     height: 150px;
-    border: 3px solid var(--blue);
+    border: 3px solid var(--blue-600);
     border-radius: 50%;
   }
 
   header h1 {
-    color: var(--blue);
+    color: var(--blue-600);
     padding-bottom: 10px;
   }
 

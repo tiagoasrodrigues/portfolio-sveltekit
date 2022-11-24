@@ -13,7 +13,6 @@
   --blue-400: #60a5fa;
   --blue-900: #1e3a8a;
 
-
   --dark-blue-900: #02001b;
 
   --white: #f0f0f0;
@@ -21,8 +20,10 @@
 
 body {
   color: var(--white);
-  /* background-color: var(--background); */
+  background-color: var(--background);
+  background-image: linear-gradient(180deg, var(--background) 20%, var(--dark-blue-900) 75%);
+}
 
-  background-color: #1a1b1c;
-  background-image: linear-gradient(180deg, var(--background) 20%, var(--blue-900) 75%);
+::-webkit-scrollbar {
+  width: 0;
 }

@@ -4,26 +4,24 @@
 
 </script>
 
-<div>
-  <h1>Contato</h1>
+<div class="container">
+  <h1>Preencha o formulário abaixo que retornarei em breve :)</h1>
 
   <form>
     <input name="name" type="text" placeholder="Nome" autocapitalize="words">
     <input name="email" type="email" placeholder="E-mail">
     <br>
-    <input class="message-input" name="message" type="text" placeholder="Mensagem" autocapitalize="words"
-      maxlength="150">
+    <textarea name="message" type="text" placeholder="Mensagem"  maxlength="420"> </textarea>
     <br>
     <button>Enviar</button>
   </form>
 </div>
 
 <style>
-  div {
+  .container {
     display: flex;
     flex-direction: column;
-    height: auto;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -34,26 +32,32 @@
   }
 
   form {
-    padding-top: 28px;
+    padding-top: 96px;
   }
-
-  /* mexer na scrollbar
-  e alinha a div ao meio */
 
   form input {
     background-color: var(--dark-blue-900);
     color: var(--white);
-    height: 32px;
+    font-size: 16px;
+    height: 36px;
+    width: 350px;
     padding-left: 10px;
     margin-bottom: 16px;
-    border: 1px solid var(--blue-600);
-    border-radius: 3px;
+    border: 1.5px solid var(--blue-600);
+    border-radius: 8px;
   }
 
-  .message-input {
-    height: 100px;
-    width: 100%;
+  form textarea {
+    background-color: var(--dark-blue-900);
+    color: var(--white);
     font-size: 16px;
+    height: 200px;
+    width: 100%;
+    padding: 26px;
+    padding-bottom: 150px;
+    border: 1.5px solid var(--blue-600);
+    border-radius: 8px;
+    margin-bottom: 10px;
   }
 
   ::placeholder {
