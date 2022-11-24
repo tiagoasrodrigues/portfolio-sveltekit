@@ -1,17 +1,17 @@
 <title>My projects</title>
 
 <script lang="ts">
-  import Project from "/src/lib/components/project.svelte";
+  import Project from "/src/lib/components/Project.svelte";
 </script>
 
 <div class="container">
   <div class="grid-wrapper">
-    <Project numProject="1"/>
-    <Project numProject="2"/>
-    <Project numProject="3"/>
-    <Project numProject="4"/>
-    <Project numProject="5"/>
-    <Project numProject="6"/>
+    <Project numProject="Transition" />
+    <Project numProject="2" />
+    <Project numProject="3" />
+    <Project numProject="4" />
+    <Project numProject="5" />
+    <Project numProject="6" />
   </div>
 </div>
 
